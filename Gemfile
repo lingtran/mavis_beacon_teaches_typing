@@ -9,12 +9,18 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   gem 'byebug'
   gem 'capybara'
   gem 'launchy'
   gem 'pry'
+  gem 'rspec-rails'
+  gem 'mocha'
+  gem 'shoulda'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
 end
 
 group :development do
