@@ -16,7 +16,7 @@ class UserMakesAttemptTest < ActionDispatch::IntegrationTest
 
     assert_equal level_path(level), current_path
     assert page.has_content?(level.title)
-    
+
     within('#attempts li:first') do
       assert page.has_content?(attempt.created_at)
       assert page.has_content?('95%')
