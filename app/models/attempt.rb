@@ -8,9 +8,14 @@ class Attempt < ActiveRecord::Base
 
   def point_score
     score = 0
-    level.text.chars.each_with_index do |char, index|
+    text.chars.each_with_index do |char, index|
       score += 1 if text[index] == level.text[index]
     end
     score = (score.to_f/level.text.length) * 100
-  end
+
+  #   attempt_text = text.chars
+  #   level_text = level.text.chars
+  #   comparison = (attempt_text).zip(level_text)
+  #   comparison.count { |pair| pair.first == pair.last } / (level_text.length).to_f * 100
+  # end
 end
