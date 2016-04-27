@@ -1,4 +1,8 @@
 class AttemptsController < ApplicationController
+  def index
+    @user_attempts = Attempt.where(name: params[:name])
+  end
+
   def new
     @level   = Level.find(params[:level_id])
     @attempt = Attempt.new
@@ -15,8 +19,8 @@ class AttemptsController < ApplicationController
   end
 
 private
-  
+
   def attempt_params
-    params.require(:attempt).permit(:text)
+    params.require(:attempt).permit(:text, :name)
   end
 end

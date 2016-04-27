@@ -1,0 +1,10 @@
+<h1> Attempts by User </h1>
+
+<div class="user-attempts">
+  <ul>
+  <% @user_attempts.each do |attempt| %>
+    <li><%= attempt.name %>: <%= attempt.text %></li>
+  <% end %>
+  </ul>
+
+</div>
